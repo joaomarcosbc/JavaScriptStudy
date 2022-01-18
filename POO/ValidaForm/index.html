@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script> src="https://kit.fontawesome.com/1ab94d0eba.js"</script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Form</title>
+</head>
+<body>
+    <section class="container">
+        
+        <h2>Form</h2>
+            <span class="header">
+                <ul>
+                    <li>Nenhum campo pode estar vazio.</li>
+                    <li>Usuário só poderá conter letras ou números.</li>
+                    <li>Usuário deverá ter entre 3 e 12 caracteres.</li>
+                    <li>Senha precisa ter entre 2 e 12 caracteres.</li>
+                </ul>
+            </span>
+                   
+        <form action="/" method="post" class="formulario">
+            <div class="input-field">
+                <input type="text" class="usuario" placeholder="Insira um usuário: ">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <input type="text" class="nome" placeholder="Insira seu nome: ">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <input type="text" class="sobrenome" placeholder="Insira seu Sobrenome: ">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <input type="text" class="cpf" placeholder="Insira seu CPF: ">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <input type="password" class="senha" placeholder="Insira sua senha: ">
+                <div class="underline"></div>
+            </div>
+            <div class="input-field">
+                <input type="password" class="repetir-senha" placeholder="Confirme sua senha: ">
+                <div class="underline"></div>
+            </div>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+    </section>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
