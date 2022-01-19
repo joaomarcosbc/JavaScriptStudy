@@ -81,6 +81,7 @@ form {
 }
 
 .input-field input {
+    width: 100%;
     outline: none;
     font-size: 0.9rem;
     color: rgb(0, 0, 0, 0.7);
@@ -113,4 +114,12 @@ form input[type="submit"]:hover {
     margin-bottom: 1rem;
     font-size: 0.9rem;
     color: rgb(0, 0, 0, 0.7);
+}
+
+.input-field .error-text::placeholder {
+    color: rgb(245, 63, 63);
+}
+
+.input-field .error-text {
+    color: rgb(245, 63, 63);
 }
