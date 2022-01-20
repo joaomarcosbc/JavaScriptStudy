@@ -32,6 +32,35 @@ class Validation {
                 }
             }
 
+            if(campo.classList.contains('usuario')){
+                const usuario = campo.value
+                if(!this.validaUsuario(usuario)) {
+                    this.mostraErro(campo)
+                    valid = false
+                }
+                    
+            }
+            if(campo.classList.contains('senha')){
+                const senha = campo.value
+                if(!this.validaUsuario(senha)) {
+                    this.mostraErro(campo)
+                    valid = false
+                }
+                    
+            }
+
+        }
+    }
+
+    validaUsuario(campoUsuario) {
+        if (campoUsuario.length < 3 || campoUsuario.length > 20) {
+            return false
+        }
+        else if(!campoUsuario.match(/[a-zA-Z0-9]+$/g)) {
+            return false
+        }
+        else {
+            return true
         }
     }
 
@@ -39,6 +68,13 @@ class Validation {
         const cpf = new ValidaCPF(campoCPF.value)
         return cpf.valida()
     }
+
+    validaSenha(campoSenha) {
+        if (campoSenha.length < 3 || campoSenha.length > 20) {
+            return false
+        }
+    }
+        
 
     mostraErro(campo) {
         campo.classList.add('error-text')
