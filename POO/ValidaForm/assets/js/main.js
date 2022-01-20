@@ -42,11 +42,20 @@ class Validation {
             }
             if(campo.classList.contains('senha')){
                 const senha = campo.value
-                if(!this.validaUsuario(senha)) {
+                if(!this.validaSenha(senha)) {
                     this.mostraErro(campo)
                     valid = false
                 }
                     
+            }
+
+            if(campo.classList.contains('repetir-senha')) {
+                const senhaConfirmada = this.formulario.querySelector('.repetir-senha').value
+                const senha = this.formulario.querySelector('.senha').value
+                if(!this.validaSenha(senhaConfirmada) || !this.validaConfirmaSenha(senhaConfirmada,senha)) {
+                    this.mostraErro(campo)
+                    valid = false
+                }
             }
 
         }
@@ -72,10 +81,20 @@ class Validation {
     validaSenha(campoSenha) {
         if (campoSenha.length < 3 || campoSenha.length > 20) {
             return false
+        } else {
+            return true
         }
     }
-        
+    
+    validaConfirmaSenha(campoConfirmaSenha, campoSenha) {
+        if (campoConfirmaSenha !== campoSenha) {
+            return false
+        } else {
+            return true
+        }
 
+    }
+        
     mostraErro(campo) {
         campo.classList.add('error-text')
     }
