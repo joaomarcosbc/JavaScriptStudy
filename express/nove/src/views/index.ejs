@@ -1,0 +1,27 @@
+<%- include('./inlcudes/head') %>
+
+<body>
+
+  <section class="container">
+    <h1>
+
+      <%= titulo %>
+
+      <% numeros.forEach(num => { %>
+      <%=  num %>
+      <% }) %>
+
+    </h1>
+    
+    <form action="/" method="post">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <label>Cliente</label>
+      <input type="text" name="cliente">
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <script src="./assets/js/bundle.js"></script>
+</body>
+
+</html>
