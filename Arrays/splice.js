@@ -1,4 +1,4 @@
-const nomes = ['João', 'Juba' , 'Arthur', 'Jó', 'Amanda', 'Larissa']
+const nomes = ['João', 'Juba' , 'Arthur', 'Jó', 'Amanda', 'Larissa', 'Walter']
 const nomes2 = [...nomes]
 
 
